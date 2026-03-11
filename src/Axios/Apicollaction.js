@@ -54,9 +54,10 @@ export const postUploadApi = async (payload) => {
   }
 };
 
-export const fetchpostApi = async () => {
+export const fetchAllpostApi = async () => {
   try {
-    const response = await api.get(apiPath.Post,);
+    const response = await api.get(apiPath.Post);
+    const getAllUser = await api.get(apiPath.USERS)
     return response.data;
   } catch (error) {
     throw new Error(error.response?.data?.message || error.message);
