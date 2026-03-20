@@ -25,10 +25,10 @@ export const PostIcon = () => {
 export const NotificationIcon = ({ pendingnotification }) => {
   return (
     <div className="relative">
-      <Link
+     <Link
         to={pagePaths.notifications}
         className="size-2 bg-red-500 rounded-full absolute -top-0.2 right-0 "
-      ></Link>
+      />
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

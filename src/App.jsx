@@ -16,6 +16,7 @@ import ProtectedRoute from "./router/ProtectedRoute";
 import { useState } from "react";
 import StoryPortal from "./portal/StoryPortal";
 import { stories } from "./data/data";
+import { NotificationTile } from "./pages/Notifications";
 
 function App() {
   const [open, setOpen] = useState(true);

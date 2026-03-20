@@ -11,7 +11,7 @@ const NavBar = () => {
       <PostIcon />
       <Link
         to={pagePaths.home}
-        className="max-w-4/12  flex items-center justiify-center"
+        className="max-w-4/12  flex items-center justiify-centgr"
       >
         <img
           src="/assets/header_logo-removebg-preview.png"
@@ -20,7 +20,7 @@ const NavBar = () => {
         />
       </Link>
       <NotificationIcon />
-    </div>
+   </div>
   );
 };
 

@@ -88,3 +88,6 @@ export const likePostApi = async (postId, likepayload) => {
     throw new Error(error.message);
   }
 };
+// export const notification = async(){
+
+// }

@@ -197,5 +197,25 @@
       "userId": "1ac6"
     }
   ],
-  "$schema": "./node_modules/json-server/schema.json"
+  "$schema": "./node_modules/json-server/schema.json",
+  "notifications": [
+    {
+      "senderId": "",
+      "receverId":"",
+      "sender": {
+        "username": "namdev",
+        "avatar": "url"
+      },
+      "type": {
+        "follow": "follow",
+        "post": "post"
+      },
+      "createdAt": "2026",
+      "message": "likes your post",
+      "postDetaial": {
+        "image": "url",
+        "id": ""
+      }
+    }
+  ]
 }
