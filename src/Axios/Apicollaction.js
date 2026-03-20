@@ -72,5 +72,19 @@ export const fetchuserpostApi = async (userId) => {
     throw new Error(error.response?.data?.message || error.message);
   }
 };
+export const likePostApi = async (postId, likepayload) => {
+  try {
 
+    let response = await api.patch(
+      `${apiPath.Post}/${postId}`,
+      {
+        likes: [likepayload]
+      }
+    );
 
+    return response.data;
+
+  } catch (error) {
+    throw new Error(error.message);
+  }
+};

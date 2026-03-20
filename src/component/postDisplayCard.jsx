@@ -1,7 +1,31 @@
 import React from "react";
+import { likePostApi } from "../Axios/Apicollaction";
 
 const PostDisplayCard = ({ post, isLiked }) => {
+    let loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"))
+    async function handlePostLike() {
+        try {
 
+            let newlikes = [...new set(...[post.likes, loggedInUser.id])]
+            let response = await likePostApi(post?.id, newlikes);
+            console.log(response);
+        } catch (error) {
+            console.log(error);
+            alert("failed to like post");
+        }
+    }
+    async function handlePostDiLike() {
+        try {
+            let newlikes = post.likes;
+            let idx = newlikes.indexOf(loggedInUser.id)
+                newlikes= newlikes.splice(idx, 1)
+            let response = await likePostApi(post?.id, newlikes);
+            console.log(response);
+        } catch (error) {
+            console.log(error);
+            alert("failed to like post");
+        }
+    }
     return (
         <div className="bg-gray-100 py-6">
             <div className="max-w-md mx-auto">
@@ -39,7 +63,9 @@ const PostDisplayCard = ({ post, isLiked }) => {
                         <div className="flex space-x-4 text-xl mb-2">
 
                             {/* Like */}
-                            <div className="flex gap-1 items-center">
+                            <div onClick={()=>{
+                                isLiked ? handlePostDiLike(): handlePostLike()
+                            }} className="flex gap-1 items-center">
                                 {!isLiked ? (
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none"
                                         viewBox="0 0 24 24" strokeWidth={1.5}
@@ -67,27 +93,25 @@ const PostDisplayCard = ({ post, isLiked }) => {
 
                             {/* Comment */}
                             <div className="flex gap-0.5 justify-center items-center"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6"> <path strokeLinecap="round" strokeLinejoin="round" d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 0 1-.923 1.785A5.969 5.969 0 0 0 6 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337Z" /> </svg><span>0</span>
-                                </div>
-                                {/* Save */}
-                                <div className="flex gap-0.5 justify-center items-center"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6"> <path strokeLinecap="round" strokeLinejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" /> </svg><span>0</span> </div>
                             </div>
-
-                            <p className="font-semibold">
-                                {post?.likes?.length || 0} likes
-                            </p>
-
-                            <p>
-                                <span className="font-semibold">{post.username}</span>{" "}
-                                {post.caption}
-                            </p>
-
+                            {/* Save */}
+                            <div className="flex gap-0.5 justify-center items-center"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6"> <path strokeLinecap="round" strokeLinejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" /> </svg><span>0</span> </div>
                         </div>
+
+
+
+                        <p>
+                            <span className="font-semibold">{post.username}</span>{" "}
+                            {post.caption}
+                        </p>
 
                     </div>
 
                 </div>
+
             </div>
-            );
+        </div>
+    );
 };
 
-            export default PostDisplayCard;
+export default PostDisplayCard; 

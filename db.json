@@ -101,18 +101,25 @@
   ],
   "posts": [
     {
-      "id": "uuid",
-      "userId": "uuid",
-      "image": "imageUrl",
-      "caption": "hello word",
-      "likes": [],
-      "createdAt": "date"
-    },
-    {
       "id": "6813",
       "image": "https://images.pexels.com/photos/1070534/pexels-photo-1070534.jpeg?cs=srgb&dl=pexels-steve-1070534.jpg&fm=jpg",
       "caption": "ghfhfh",
-      "likes": [],
+      "likes": [
+        [
+          [
+            [
+              [
+                [
+                  "1ac6"
+                ]
+              ],
+              "1ac6"
+            ],
+            "1ac6"
+          ],
+          "1ac6"
+        ]
+      ],
       "createdAt": "11/3/2026",
       "userId": "1ac6"
     },
@@ -120,7 +127,11 @@
       "id": "ad18",
       "image": "https://images.pexels.com/photos/1070534/pexels-photo-1070534.jpeg?cs=srgb&dl=pexels-steve-1070534.jpg&fm=jpg",
       "caption": "grtfdgxdvgh",
-      "likes": [],
+      "likes": [
+        [
+          "1ac6"
+        ]
+      ],
       "createdAt": "11/3/2026",
       "userId": "1ac6"
     },
@@ -128,7 +139,16 @@
       "id": "4545",
       "image": "https://images.pexels.com/photos/1070534/pexels-photo-1070534.jpeg?cs=srgb&dl=pexels-steve-1070534.jpg&fm=jpg",
       "caption": "thgchbhg",
-      "likes": [],
+      "likes": [
+        [
+          [
+            [
+              "1ac6"
+            ],
+            "1ac6"
+          ]
+        ]
+      ],
       "createdAt": "11/3/2026",
       "userId": "1ac6"
     },
@@ -144,7 +164,11 @@
       "id": "500e",
       "image": "https://cdnb.artstation.com/p/marketplace/presentation_assets/003/430/265/medium/file.jpg?1706950304",
       "caption": "rgvghf",
-      "likes": [],
+      "likes": [
+        [
+          "1ac6"
+        ]
+      ],
       "createdAt": "11/3/2026",
       "userId": "7085"
     },
@@ -152,7 +176,11 @@
       "id": "928f",
       "image": "https://cdnb.artstation.com/p/marketplace/presentation_assets/003/430/265/medium/file.jpg?1706950304",
       "caption": "gtrgg",
-      "likes": [],
+      "likes": [
+        [
+          "1ac6"
+        ]
+      ],
       "createdAt": "11/3/2026",
       "userId": "7085"
     },
@@ -160,7 +188,11 @@
       "id": "df1d",
       "image": "https://tse1.mm.bing.net/th/id/OIP.E01JSSbqxK7F9X_vUqDrVQHaHa?w=1024&h=1024&rs=1&pid=ImgDetMain&o=7&rm=3",
       "caption": "jhfjffjijkid",
-      "likes": [],
+      "likes": [
+        [
+          "1ac6"
+        ]
+      ],
       "createdAt": "11/3/2026",
       "userId": "1ac6"
     }
