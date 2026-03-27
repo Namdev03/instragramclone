@@ -2,8 +2,10 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router";
 import { pagePaths } from "../router/pagePaths";
 import { loginApi } from "../Axios/Apicollaction";
-
+import { handleLogin } from "../service/authSlice"
+import { useDispatch } from "react-redux";
 export default function Login() {
+  const dispatch = useDispatch()
   const {
     register,
     handleSubmit,
@@ -11,7 +13,11 @@ export default function Login() {
   } = useForm();
 
   const onSubmit = async (data) => {
-    console.log("Login:", data);
+    dispatch(handleLogin({
+      userDetails:{},
+     loginStatus :true
+    }))
+      console.log("Login:", data);
     // TODO: integrate with auth API
     try {
       let response = await loginApi(data)
